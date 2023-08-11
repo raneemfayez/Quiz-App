@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Text(
-              "We Are Creative, Enjoy our app",
+              "We Are Creative, Enjoy our app ...... ",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,
