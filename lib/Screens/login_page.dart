@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/Screens/category_page.dart';
 
 class loginPage extends StatelessWidget {
   const loginPage({Key? key}) : super(key: key);
@@ -105,7 +106,15 @@ class loginPage extends StatelessWidget {
                               backgroundColor:
                                   MaterialStateProperty.all(Color(0xFF2C752E)),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      categoryPage(),
+                                ),
+                              );
+                            },
                             child: const Text(
                               "Login",
                               style: TextStyle(fontSize: 20),
