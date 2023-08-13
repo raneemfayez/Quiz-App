@@ -111,7 +111,7 @@ class loginPage extends StatelessWidget {
                                 context,
                                 MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
-                                      categoryPage(),
+                                      CategorizationScreen(),
                                 ),
                               );
                             },

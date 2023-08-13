@@ -1,28 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/Screens/test_page.dart';
 
-class categoryPage extends StatelessWidget {
-  categoryPage({super.key});
+import '../wedgets/category.dart';
 
-  List quizName = ["Sport Test", "History Test", "General Test"];
-  List quizColor = [Colors.blue, Colors.red, Colors.yellow];
+class CategorizationScreen extends StatelessWidget {
+  const CategorizationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          for (int i = 0; i < 3; i++)
-            Expanded(
-              child: Container(
-                child: Center(
-                  child: Text(quizName[i]),
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          color: Color(0xffFFFFFF),
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CategoryContainer(
+                  testName: "Sport test",
+                  onTabFunction: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const QuestionScreen()),
+                    );
+                  },
                 ),
-                decoration: BoxDecoration(
-                    color: quizColor[i],
-                    border: Border.all(width: 1, color: Colors.black)),
-              ),
-            )
-        ],
+                CategoryContainer(
+                  testName: "History test",
+                  onTabFunction: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const QuestionScreen()),
+                    );
+                  },
+                ),
+                CategoryContainer(
+                  testName: "General",
+                  onTabFunction: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const QuestionScreen()),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
