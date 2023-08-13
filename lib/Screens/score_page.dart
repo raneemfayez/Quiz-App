@@ -10,7 +10,7 @@ class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 206, 232, 245),
+      backgroundColor: Color.fromARGB(255, 251, 251, 251),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -27,12 +27,14 @@ class ScoreScreen extends StatelessWidget {
                   TextSpan(
                       text: 'Raneem',
                       style: TextStyle(
-                          color: Colors.blue, fontWeight: FontWeight.bold)),
+                          color: Color.fromARGB(255, 6, 86, 60),
+                          fontWeight: FontWeight.bold)),
                   TextSpan(text: ' your score is'),
                   TextSpan(
                       text: ' 15/20 ',
                       style: TextStyle(
-                          color: Colors.blue, fontWeight: FontWeight.bold)),
+                          color: Color.fromARGB(255, 6, 86, 60),
+                          fontWeight: FontWeight.bold)),
                 ],
               ),
             ),
@@ -40,19 +42,27 @@ class ScoreScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                );
-              },
-              child: const Text(
-                "Reset Quiz",
-                style: TextStyle(
-                  fontSize: 16,
+          Container(
+            height: 50,
+            width: 140,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromARGB(255, 183, 215, 146),
                 ),
-              )),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ScoreScreen()),
+                  );
+                },
+                child: const Text(
+                  "Play Again",
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                )),
+          ),
         ],
       ),
     );
