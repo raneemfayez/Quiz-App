@@ -52,8 +52,7 @@ class ScoreScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const ScoreScreen()),
+                    MaterialPageRoute(builder: (context) => const HomePage()),
                   );
                 },
                 child: const Text(

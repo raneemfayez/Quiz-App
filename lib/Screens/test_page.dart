@@ -13,7 +13,7 @@ class QuestionScreen extends StatelessWidget {
       appBar: AppBar(
         leading: Center(
             child: Text(
-          "Q:1",
+          "3/15",
           style: TextStyle(fontSize: 20),
         )),
         automaticallyImplyLeading: false,
@@ -33,7 +33,7 @@ class QuestionScreen extends StatelessWidget {
               height: 15,
             ),
             const Text(
-              "Question 1",
+              "Question 3",
               style: TextStyle(
                   fontSize: 35, color: Color.fromARGB(255, 219, 9, 9)),
             ),
