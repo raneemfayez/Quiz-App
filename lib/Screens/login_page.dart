@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/Global/quiz_data.dart';
 import 'package:quiz_app/Screens/category_page.dart';
 
 class loginPage extends StatelessWidget {
@@ -51,6 +52,7 @@ class loginPage extends StatelessWidget {
                             height: 10,
                           ),
                           TextFormField(
+                            controller: userNameControler,
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return ("Username cannot be empty ");
@@ -159,7 +161,7 @@ class loginPage extends StatelessWidget {
                               ),
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
-                                  Navigator.push(
+                                  Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute<void>(
                                       builder: (BuildContext context) =>

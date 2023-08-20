@@ -1,24 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/Global/quiz_data.dart';
+import 'package:quiz_app/Screens/test_page.dart';
 
 class CategoryContainer extends StatelessWidget {
-  final String? testName;
-  final Function()? onTabFunction;
-  const CategoryContainer({this.onTabFunction, this.testName});
+  // final String? testName;
+  // final Function()? onTabFunction;
+  final int? index;
+  CategoryContainer({this.index});
 
+  List quizzText = [
+    "Sport Test",
+    "History Test",
+    "General Test",
+    "IQ Test",
+    "Math Test",
+    "English Test"
+  ];
+  List quizzColor = [
+    Colors.blue,
+    Colors.green,
+    Colors.red,
+    Colors.yellow,
+    Colors.grey,
+    Colors.deepOrange,
+  ];
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-        onTap: onTabFunction,
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute<void>(
+              builder: (BuildContext context) =>
+                  QuestionScreen(categoryMap: dataList[index!]),
+            ),
+          );
+        },
         child: Container(
-            alignment: Alignment.center,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 4,
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(100)),
-                color: Color(0xff2C752E)),
+          decoration: BoxDecoration(
+              color: quizzColor[index!],
+              border: Border.all(width: 1, color: Colors.lightGreen)),
+          child: Center(
+              child: Center(
             child: Text(
-              testName!,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-            )));
+              quizzText[index!],
+              style: TextStyle(fontSize: 34),
+            ),
+          )),
+        ),
+      ),
+    );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-List data = [
+TextEditingController userNameControler = TextEditingController();
+
+List dataList = [
   {
     "CategoryName": "Sport test",
     "color": Colors.blue,
@@ -38,7 +40,7 @@ List data = [
   },
   {
     "CategoryName": "History test",
-    "color": Colors.red,
+    "color": Colors.green,
     "data": [
       {
         "question": "Who was the last pharaoh of ancient Egypt?",
@@ -72,7 +74,7 @@ List data = [
   },
   {
     "CategoryName": "General test",
-    "color": Colors.yellow,
+    "color": Colors.red,
     "data": [
       {
         "question":
@@ -100,6 +102,111 @@ List data = [
           {"ans": " Mars ", "score": 1},
           {"ans": "Jupiter", "score": 0},
           {"ans": " Saturn", "score": 0}
+        ],
+      }
+    ],
+  },
+  {
+    "CategoryName": "IQ test",
+    "color": Colors.yellow,
+    "data": [
+      {
+        "question":
+            "Who is considered the greatest basketball player of all time?",
+        "answers": [
+          {"ans": "LeBron James", "score": 0},
+          {"ans": "Magic Johnson", "score": 0},
+          {"ans": " Michael Jordan", "score": 1},
+          {"ans": "  Kobe Bryant", "score": 0},
+        ]
+      },
+      {
+        "question": "Which country has won the most FIFA World Cup titles?",
+        "answers": [
+          {"ans": "Germany", "score": 0},
+          {"ans": "Brazil", "score": 1},
+          {"ans": "Italy", "score": 0},
+          {"ans": "Argentina", "score": 0}
+        ],
+      },
+      {
+        "question":
+            "Who holds the record for the most Grand Slam singles titles in tennis?",
+        "answers": [
+          {"ans": " Roger Federer", "score": 0},
+          {"ans": " Rafael Nadal", "score": 0},
+          {"ans": "Serena Williams", "score": 1},
+          {"ans": " Novak Djokovic", "score": 0}
+        ],
+      }
+    ],
+  },
+  {
+    "CategoryName": "Math test",
+    "color": Colors.grey,
+    "data": [
+      {
+        "question":
+            "Who is considered the greatest basketball player of all time?",
+        "answers": [
+          {"ans": "LeBron James", "score": 0},
+          {"ans": "Magic Johnson", "score": 0},
+          {"ans": " Michael Jordan", "score": 1},
+          {"ans": "  Kobe Bryant", "score": 0},
+        ]
+      },
+      {
+        "question": "Which country has won the most FIFA World Cup titles?",
+        "answers": [
+          {"ans": "Germany", "score": 0},
+          {"ans": "Brazil", "score": 1},
+          {"ans": "Italy", "score": 0},
+          {"ans": "Argentina", "score": 0}
+        ],
+      },
+      {
+        "question":
+            "Who holds the record for the most Grand Slam singles titles in tennis?",
+        "answers": [
+          {"ans": " Roger Federer", "score": 0},
+          {"ans": " Rafael Nadal", "score": 0},
+          {"ans": "Serena Williams", "score": 1},
+          {"ans": " Novak Djokovic", "score": 0}
+        ],
+      }
+    ],
+  },
+  {
+    "CategoryName": "English test",
+    "color": Colors.deepOrange,
+    "data": [
+      {
+        "question":
+            "Who is considered the greatest basketball player of all time?",
+        "answers": [
+          {"ans": "LeBron James", "score": 0},
+          {"ans": "Magic Johnson", "score": 0},
+          {"ans": " Michael Jordan", "score": 1},
+          {"ans": "  Kobe Bryant", "score": 0},
+        ]
+      },
+      {
+        "question": "Which country has won the most FIFA World Cup titles?",
+        "answers": [
+          {"ans": "Germany", "score": 0},
+          {"ans": "Brazil", "score": 1},
+          {"ans": "Italy", "score": 0},
+          {"ans": "Argentina", "score": 0}
+        ],
+      },
+      {
+        "question":
+            "Who holds the record for the most Grand Slam singles titles in tennis?",
+        "answers": [
+          {"ans": " Roger Federer", "score": 0},
+          {"ans": " Rafael Nadal", "score": 0},
+          {"ans": "Serena Williams", "score": 1},
+          {"ans": " Novak Djokovic", "score": 0}
         ],
       }
     ],
