@@ -53,9 +53,9 @@ class loginPage extends StatelessWidget {
                           TextFormField(
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return ("the User name must not be empty");
+                                return ("Username cannot be empty ");
                               } else if (value.length < 8) {
-                                return ("User Name must be graterThan 8 Characters");
+                                return ("Username must be grater than 8 Characters");
                               } else if (value[0].toUpperCase() != value[0]) {
                                 return 'First character should be uppercase';
                               }
@@ -79,10 +79,10 @@ class loginPage extends StatelessWidget {
                           TextFormField(
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Please enter password';
+                                return 'password cannot be empty';
                               } else {
                                 if (!regex.hasMatch(value)) {
-                                  return 'Enter valid password';
+                                  return 'invalid password';
                                 }
                               }
                             },
@@ -107,7 +107,7 @@ class loginPage extends StatelessWidget {
                           TextFormField(
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Please enter an email';
+                                return 'Email cannot be empty';
                               } else if (!regExp.hasMatch(value)) {
                                 return 'Please enter a valid email';
                               }
